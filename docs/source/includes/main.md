@@ -370,6 +370,7 @@ const generateRandomKey = length => {
 // Publish to Tangle
 const publishData = async payload => {
   const time = Date.now();
+  const live = require('./data.json');
   const packet = { time, data: { ...payload } };
 
   // Change MAM encryption key on each loop
